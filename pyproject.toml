@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "music-bot"
+version = "0.1.0"
+description = "Telegram bot for music statistics and matching"
+authors = ["bagin"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "3.12.6"
+fastapi = {extras = ["all"], version = "^0.115.4"}
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.36"}
+asyncpg = "^0.30.0"
+pydantic = "^2.9.2"
+pydantic-settings = "^2.6.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.7.3"
+isort = "^5.13.2"
+pre-commit = "^3.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
