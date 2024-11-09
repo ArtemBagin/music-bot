@@ -13,6 +13,9 @@ sqlalchemy = {extras = ["asyncio"], version = "^2.0.36"}
 asyncpg = "^0.30.0"
 pydantic = "^2.9.2"
 pydantic-settings = "^2.6.1"
+dependency-injector = "^4.43.0"
+faststream = "^0.5.29"
+aio-pika = "^9.4.3"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.7.3"
@@ -30,3 +33,5 @@ target-version = "py312"
 [tool.isort]
 profile = "black"
 multi_line_output = 3
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+known_first_party = ["domain", "infrastructure"]
